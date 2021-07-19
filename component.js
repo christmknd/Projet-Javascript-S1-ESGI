@@ -13,6 +13,12 @@ export default class Component {
 
     };
 
+    setState(data) {
+        this.prevState = this.state;
+        this.state = data ;
+
+    }
+
 
     render(){
         throw new Error("Component must be implemented !");
