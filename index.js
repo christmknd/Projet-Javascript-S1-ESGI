@@ -1,4 +1,6 @@
 import Animal from "./animal.js";
+import Component from "./component";
+
 const root = document.getElementById("root");
 
 
@@ -15,9 +17,11 @@ if (animal.shouldUpdate()){
 }else{
     display("chat");
 }
+
 String.interpolate = function (animal) {
     return "Type d'animal : ".animal.prop_access;
 };
+
 function display(type){
     const machaine = "Type d'animal: {{ type.name }}";
     machaine.interpolate(animal);
