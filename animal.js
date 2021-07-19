@@ -6,6 +6,7 @@ function Animal() {
         if(this.type_check()){
             previousType = type;
             type = data;
+
         }else{
             console.log("check your data validity");
         }

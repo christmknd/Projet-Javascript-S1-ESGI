@@ -15,7 +15,9 @@ export default class Component {
         }else{
             console.log("check your data validity");
         }
+
     };
+
 
     shouldUpdate = function () {
         return (
