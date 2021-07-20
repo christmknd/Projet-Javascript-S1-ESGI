@@ -1,11 +1,13 @@
+import createElement from "../outils/createElement";
+
 export default class Component {
 
-    state = {};
+    state={};
     prevState = {};
     reRender;
 
     constructor(props) {
-        this.props = props;
+        this.state = props;
     }
 
 
@@ -18,10 +20,13 @@ export default class Component {
         this.state = data ;
         this.reRender = new CustomEvent();
     }
-
+    /* getState(){
+        return this.state;
+    };*/
 
     render(){
-        throw new Error("Component must be implemented !");
+        //throw new Error("Component must be implemented !");
+        return this.state;
     }
 
 }

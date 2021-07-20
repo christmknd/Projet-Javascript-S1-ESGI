@@ -7,9 +7,9 @@ const struct= createElement("ul", {}, [
     createElement("li", {}, ["2Test1"]),
     createElement("li", {}, ["2Test2"]),
 ]);
-const app=new App();
 
-const DOM=new reactDom(root,struct);
+const app=new App(struct);
+const DOM=new reactDom(root,app.render());
 DOM.render();
 
 //root.appendChild(generateStructure(app.render()));
