@@ -1,5 +1,5 @@
 import createElement from "../outils/createElement";
-export default class FileReader{
+export default class FIleReader{
     struct = {};
     constructor() {
         this.struct= createElement("ul", {}, [

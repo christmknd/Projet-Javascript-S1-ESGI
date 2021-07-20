@@ -3,6 +3,7 @@ const generateStructure = (struct) => {
     if (typeof struct.type === "string") {
         elem = document.createElement(struct.type);
 
+
         if (struct.children) {
             for (let child of struct.children) {
                 const nodeElement =
