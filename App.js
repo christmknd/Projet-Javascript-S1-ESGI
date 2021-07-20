@@ -1,9 +1,9 @@
 import createElement from './src/outils/createElement.js';
-import HomePage from './src/pages/HomePage';
+import Component from '../components/component.js';
 
-class App {
+class App extends Component{
     constructor(props) {
-
+        super(props);
     }
     render(props){
         return  createElement("ul", {}, [
