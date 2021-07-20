@@ -1,9 +1,8 @@
 const generateStructure = (struct) => {
     let elem;
+    console.log(struct);
     if (typeof struct.type === "string") {
         elem = document.createElement(struct.type);
-
-
         if (struct.children) {
             for (let child of struct.children) {
                 const nodeElement =
@@ -27,7 +26,14 @@ const generateStructure = (struct) => {
             }
         }
     } else {
-        elem = generateStructure(/* ... */);
+        elem = document.createElement("div");
+        for (let element of struct) {
+            const nodeElement =
+                typeof element.type === "string"
+                    ? document.createTextNode(element)
+                    : generateStructure(element);
+            elem.appendChild(nodeElement);
+        }
     }
     return elem;
 };
