@@ -20,9 +20,6 @@ export default class Component {
         this.state = data ;
         this.reRender = new CustomEvent();
     }
-    /* getState(){
-        return this.state;
-    };*/
 
     render(){
         //throw new Error("Component must be implemented !");

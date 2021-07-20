@@ -1,14 +1,10 @@
-import createElement from "./src/outils/createElement";
+import HomePage from "./src/pages/HomePage.js"
 const root = document.getElementById("root");
 import reactDom from './src/DOM/DOM.js';
 import App from './App.js';
-const struct= createElement("ul", {}, [
-    createElement("li", {}, ["2Test"]),
-    createElement("li", {}, ["2Test1"]),
-    createElement("li", {}, ["2Test2"]),
-]);
 
-const app=new App(struct);
+const Home=new HomePage();
+const app=new App(Home.render());
 const DOM=new reactDom(root,app.render());
 DOM.render();
 
