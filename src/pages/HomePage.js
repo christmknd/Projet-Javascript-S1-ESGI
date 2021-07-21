@@ -1,12 +1,10 @@
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 import createElement from "../outils/createElement";
-export default class HomePage{
-    struct = {};
-    constructor() {
+const HomePage = (app) => {
         const header=Header("Home page");
-        const navbar=NavBar();
-        this.struct=createElement("div", {}, [
+        const navbar=NavBar(app);
+        return createElement("div", {}, [
            header,
             navbar
         ]);
@@ -16,7 +14,4 @@ export default class HomePage{
         //console.log(home);
         //this.struct=header;
     }
-    render() {
-        return this.struct;
-    }
-}
+export default HomePage;

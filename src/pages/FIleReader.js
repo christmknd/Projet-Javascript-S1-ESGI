@@ -1,14 +1,17 @@
+import NavBar from "../components/NavBar";
+import Header from "../components/Header";
 import createElement from "../outils/createElement";
-export default class FIleReader{
-    struct = {};
-    constructor() {
-        this.struct= createElement("ul", {}, [
-            createElement("li", {}, ["Page1"]),
-            createElement("li", {}, ["Page2"]),
-            createElement("li", {}, ["Page3"]),
-        ]);
-    }
-    render() {
-        return this.struct;
-    }
+const FIleReader = () => {
+    const header=Header("FileReader Page");
+    const navbar=NavBar();
+    return createElement("div", {}, [
+        header,
+        navbar
+    ]);
+    //let home=Object.assign(header, navbar);
+    //let home= {...navbar,...header}
+    //let home=createElement("div",{},)
+    //console.log(home);
+    //this.struct=header;
 }
+export default FIleReader;

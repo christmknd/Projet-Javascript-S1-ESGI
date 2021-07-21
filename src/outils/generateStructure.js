@@ -26,7 +26,6 @@ const generateStructure = (struct) => {
             }
         }
     } else {
-        elem = document.createElement("div");
         for (let element of struct) {
             const nodeElement =
                 typeof element.type === "string"

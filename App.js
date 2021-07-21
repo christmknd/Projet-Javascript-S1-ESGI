@@ -1,8 +1,22 @@
 import Component from './src/components/component.js';
+import HomePage from "./src/pages/HomePage.js"
+import FIleReader from "./src/pages/FIleReader.js";
+const root = document.getElementById("root");
+import reactDom from './src/DOM/DOM.js';
+var file=FIleReader();
+var Home=HomePage();
 
 class App extends Component{
     constructor(props) {
         super(props);
     }
+    render() {
+        root.appendChild(reactDom(this.state));
+    }
+
 }
-export default App;
+
+let app;
+app=new App(Home);
+app.render();
+export default app;
