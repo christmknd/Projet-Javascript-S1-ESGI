@@ -1,5 +1,3 @@
-import createElement from "../outils/createElement";
-
 export default class Component {
 
     state={};
@@ -18,7 +16,6 @@ export default class Component {
     setState(data) {
         this.prevState = this.state;
         this.state = data ;
-        this.reRender = new CustomEvent();
     }
 
     render(){

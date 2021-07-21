@@ -1,24 +1,15 @@
-function Animal() {
-    let type={},
-        previousType={};
-
-    this.initializeAnimal = function (data) {
+export default class Animal{
+     type={};
+     previousType={};
+    constructor(props) {
         if(this.type_check()){
-            previousType = type;
-            type = data;
-
+            this.previousType = type;
+            this.type = data;
         }else{
             console.log("check your data validity");
         }
-
-    };
-
-    this.shouldUpdate = function () {
-        return (
-            previousType.name !== type.name
-        );
-    };
-    this.prop_access=  function () {
+    }
+    prop_access=  function () {
         let path=type;
         let obj=this;
         const fullPath = path.split('.');
@@ -33,7 +24,7 @@ function Animal() {
         }
         return obj;
     }
-    this.type_check=function(){
+    type_check=function(){
         for (const conf in type) {
             switch (conf) {
                 case 'name': return true;
@@ -41,7 +32,5 @@ function Animal() {
             }
         }
     }
+
 }
-
-
-export default animal;

@@ -13,6 +13,12 @@ class App extends Component{
     render() {
         root.appendChild(reactDom(this.state));
     }
+    display(newProps){
+        this.setState(newProps);
+        if(this.shouldUpdate()){
+            root.replaceChild(reactDom(this.state), root.firstChild);
+        }
+    }
 
 }
 
