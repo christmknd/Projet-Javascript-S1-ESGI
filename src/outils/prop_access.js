@@ -1,4 +1,5 @@
-export default  function prop_access(obj, path) {
+Object.prototype.prop_access = function prop_acess (path) {
+    let obj = this
     if(path === "" || path === null) return obj;
     if(obj === null) obj = {};
     const fullPath = path.split('.');
