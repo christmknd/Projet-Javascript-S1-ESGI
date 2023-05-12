@@ -1,6 +1,7 @@
-prop_access=  function () {
-    let path=type;
-    let obj=this;
+Object.prototype.prop_access = function prop_acess (path) {
+    let obj = this
+    if(path === "" || path === null) return obj;
+    if(obj === null) obj = {};
     const fullPath = path.split('.');
     const partOfPath = [];
     for (let part of fullPath) {
